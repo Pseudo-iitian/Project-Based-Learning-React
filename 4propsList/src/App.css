@@ -1,0 +1,14 @@
+li{
+  list-style: none;
+}
+
+.li-container{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.img-description{
+
+  line-height: 0px;
+}

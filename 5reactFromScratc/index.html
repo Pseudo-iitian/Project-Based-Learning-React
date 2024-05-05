@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaste React</title>
+  <style>
+    .heading{
+      color: green;
+    }
+    #container{
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+
+    <!-- <div class="container">
+      <h1>Heading1</h1>
+      <h2>Heading2</h2>
+    </div> -->
+
+  </div>
+
+  <script crossorigin="anonymous" src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin="anonymous" src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script>
+
+    const heading = React.createElement("h1",{
+      className: "heading",
+      key:0,
+      style:{color:"black"}
+      },"Heading 1");
+
+    const heading2 = React.createElement("h2",{id:"heading2",key:1},"Heading 2")
+
+    const container = React.createElement('div',{id:"container",key:2},[heading,heading2])
+    // const heading = React.createElement("h1",{className: "heading"},"Namaste Everyone!");
+    // console.log(heading, typeof heading)
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(container)
+    // ReactDOM.render(heading, document.getElementById('root'));
+
+  </script>
+</body>
+</html>
